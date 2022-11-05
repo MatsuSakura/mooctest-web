@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.6" jmeter="2.11">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="tencentvideo" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+        <longProp name="ThreadGroup.start_time">1666343798000</longProp>
+        <longProp name="ThreadGroup.end_time">1666343918000</longProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </Arguments>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers"/>
+        </HeaderManager>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="v.qq.com/channel/variety" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">A SSLv3-compatible ClientHello handshake was found. Fiddler extracted the parameters below.&#xd;
+&#xd;
+Version: 3.3 (TLS/1.2)&#xd;
+Random: C6 B7 47 99 38 AE 7B 2E 90 79 5D 38 1C 50 BC 90 5F EF CE 73 2F A7 B9 98 5F B6 9D 3E 3B 4D 51 46&#xd;
+&quot;Time&quot;: 2051/6/29 9:15:50&#xd;
+SessionID: FF 97 D7 1B 8A E4 26 9C 35 56 1B 28 CC F3 76 71 83 03 75 1F 59 F1 CB 04 9F 89 56 15 85 35 F8 28&#xd;
+Extensions: &#xd;
+	0x8a8a		empty&#xd;
+	server_name	v.qq.com&#xd;
+	extended_master_secret	empty&#xd;
+	renegotiation_info	00&#xd;
+	elliptic_curves	unknown [0xFAFA), unknown [0x1D), secp256r1 [0x17], secp384r1 [0x18]&#xd;
+	ec_point_formats	uncompressed [0x0]&#xd;
+	SessionTicket	empty&#xd;
+	ALPN		h2, http/1.1&#xd;
+	status_request	OCSP - Implicit Responder&#xd;
+	signature_algs	sha256_ecdsa, Unknown[0x8]_Unknown[0x4], sha256_rsa, sha384_ecdsa, Unknown[0x8]_Unknown[0x5], sha384_rsa, Unknown[0x8]_Unknown[0x6], sha512_rsa, sha1_rsa&#xd;
+	SignedCertTimestamp (RFC6962)	empty&#xd;
+	0x0033		00 29 FA FA 00 01 00 00 1D 00 20 25 FB E4 D3 32 F4 30 70 C3 B8 93 B6 D3 E7 27 FE 23 EA 8B CA 66 45 7A 9D 0B 82 B6 15 79 C9 83 32&#xd;
+	0x002d		01 01&#xd;
+	0x002b		0A FA FA 03 04 03 03 03 02 03 01&#xd;
+	0x001b		02 00 02&#xd;
+	0xeaea		00&#xd;
+	padding	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xd;
+Ciphers: &#xd;
+	[4A4A]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/&#xd;
+	[1301]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/&#xd;
+	[1302]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/&#xd;
+	[1303]	Unrecognized cipher - See http://www.iana.org/assignments/tls-parameters/&#xd;
+	[C02B]	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&#xd;
+	[C02F]	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&#xd;
+	[C02C]	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&#xd;
+	[C030]	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&#xd;
+	[CCA9]	TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256&#xd;
+	[CCA8]	TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256&#xd;
+	[C013]	TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA&#xd;
+	[C014]	TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA&#xd;
+	[009C]	TLS_RSA_WITH_AES_128_GCM_SHA256&#xd;
+	[009D]	TLS_RSA_WITH_AES_256_GCM_SHA384&#xd;
+	[002F]	TLS_RSA_AES_128_SHA&#xd;
+	[0035]	TLS_RSA_AES_256_SHA&#xd;
+	[000A]	SSL_RSA_WITH_3DES_EDE_SHA&#xd;
+&#xd;
+Compression: &#xd;
+	[00]	NO_COMPRESSION&#xd;
+&#xd;
+&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">v.qq.com/channel/variety</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v.qq.com:443</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="v.qq.com/channel/variety/list?filter_params=exclusive%3D1%26iarea%3D1%26itype%3D2%26iyear%3D2022%26ipay%3D1%26sort%3D75&amp;page_id=channel_list_second_page&amp;channel_2022=1" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">v.qq.com/channel/variety/list?filter_params=exclusive%3D1%26iarea%3D1%26itype%3D2%26iyear%3D2022%26ipay%3D1%26sort%3D75&amp;page_id=channel_list_second_page&amp;channel_2022=1</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/channel/variety/list?filter_params=exclusive%3D1%26iarea%3D1%26itype%3D2%26iyear%3D2022%26ipay%3D1%26sort%3D75&amp;page_id=channel_list_second_page&amp;channel_2022=1</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <SyncTimer guiclass="TestBeanGUI" testclass="SyncTimer" testname="Synchronizing Timer" enabled="true">
+              <intProp name="groupSize">50</intProp>
+            </SyncTimer>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="fileEncoding"></stringProp>
+              <stringProp name="variableNames"></stringProp>
+              <stringProp name="delimiter">,</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

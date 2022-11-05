@@ -1,0 +1,1 @@
+{"score":"100.0","nodes_info":{"empty":false},"detail":{"duration":"10.0","sync_timer":"20.0","name_thread_group":"10.0","parameter":"20.0","ramp_up":"10.0","num_threads":"10.0","transaction":"10.0","max_error":"30.0"}}
