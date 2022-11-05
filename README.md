@@ -57,7 +57,7 @@ badboy是使用IE内核进行访问录制的一款软件，很久之前就已经
 
 [Microsoft Edge WebDriver - Microsoft Edge Developer](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 
-本次预选赛我是拿了双百进入的省赛，省赛功能测试95.45分，功能测试80（参数化设置问题，修了很久不行还是放弃了）
+本次预选赛我是拿了双百进入的省赛，省赛功能测试95.45分，性能测试80（参数化设置问题，修了很久不行还是放弃了）
 
 我个人的selenium使用也比较匮乏，还是得继续学习。
 
